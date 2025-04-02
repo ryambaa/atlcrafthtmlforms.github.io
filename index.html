@@ -18,13 +18,75 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Урок 9. Размещение пикселя на сайте через Менеджер тегов</title>
+    <title>Каталог сноубордов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .snowboard-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .snowboard {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            transition: box-shadow 0.3s;
+        }
+        .snowboard:hover {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        .snowboard img {
+            width: 100%;
+            height: auto;
+        }
+        .info {
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
-
-    <p>Страница 1</p>
-    <button id="btn_1">Кнопка 1</button>
-    <button id="btn_2">Кнопка 2</button>
-
+    <h1>Каталог сноубордов</h1>
+    <div class="snowboard-container">
+        <div class="snowboard">
+            <img src="https://placehold.co/600x400" alt="Board X">
+            <div class="info">
+                <h2>Board X</h2>
+                <p>Бренд: Brand A</p>
+                <p>Размер: 155 см</p>
+                <p>Тип: All-Mountain</p>
+                <p>Цена: $500</p>
+            </div>
+        </div>
+        <div class="snowboard">
+            <img src="https://placehold.co/600x400" alt="Speedster Pro">
+            <div class="info">
+                <h2>Speedster Pro</h2>
+                <p>Бренд: Brand B</p>
+                <p>Размер: 152 см</p>
+                <p>Тип: Freestyle</p>
+                <p>Цена: $600</p>
+            </div>
+        </div>
+        <div class="snowboard">
+            <img src="https://placehold.co/600x400" alt="Powder Master">
+            <div class="info">
+                <h2>Powder Master</h2>
+                <p>Бренд: Brand C</p>
+                <p>Размер: 160 см</p>
+                <p>Тип: Powder</p>
+                <p>Цена: $700</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
